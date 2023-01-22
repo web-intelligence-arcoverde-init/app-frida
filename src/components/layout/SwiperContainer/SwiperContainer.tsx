@@ -20,12 +20,16 @@ export const SwiperContainer = ({
 }: ISwiperContainer) => {
   return (
     <Container align="center" justify="center" padding={22}>
-      <Text>{title}</Text>
-      <Separator height={8} />
       {children}
       <Separator height={8} />
-      <Text>{description}</Text>
-      {footer && <View style={{width: 80, marginTop: scale(8)}}>{footer}</View>}
+      <Text style={{color: '#af3476'}} h2 h2Style={{fontSize: scale(24)}}>
+        {title}
+      </Text>
+
+      <Separator height={4} />
+      <Text style={{textAlign: 'center'}}>{description}</Text>
+      <Separator height={8} />
+      {footer && footer}
     </Container>
   );
 };
