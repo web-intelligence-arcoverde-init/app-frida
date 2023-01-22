@@ -1,9 +1,14 @@
-import {Text, View} from 'react-native';
+import {Image} from 'react-native';
+
+import {Container} from '../../components';
+
+import {IMAGES} from '../../assets';
+const {Logo} = IMAGES;
 
 export const SplashScreen = () => {
   return (
-    <View>
-      <Text>SplashScreen</Text>
-    </View>
+    <Container padding={20} align="center" justify="center" color="pink-100">
+      <Image source={Logo} />
+    </Container>
   );
 };
