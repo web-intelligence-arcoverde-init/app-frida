@@ -1,45 +1,33 @@
-import {Image, TouchableOpacity, View} from 'react-native';
-import {Button, Text} from '@rneui/themed';
+import React from 'react';
+import Swiper from 'react-native-swiper';
 
-import {IMAGES} from '../../assets';
-import {Container, StyledContainer} from '../../components';
-import {COLORS} from '../../common';
+import {SwiperContainer, Container} from '../../components';
 
-const {LogoNomeRosa} = IMAGES;
+const SHOW_ARROW_SWIPER = false;
+
+const LOOP_SWIPER = false;
 
 export const IntroScreen = () => {
   return (
-    <Container padding={24} align="center" justify="center">
-      <Image source={LogoNomeRosa} />
-      <Button
-        title="Junte-se"
-        containerStyle={{
-          borderRadius: 18,
-          width: '90%',
-        }}
-        buttonStyle={{
-          backgroundColor: `#AF3476`,
-          height: 48,
-        }}
-      />
-      <Text style={{fontSize: 14, textAlign: 'center', marginTop: 20}}>
-        Já faz parte ?
-      </Text>
-
-      <View style={{display: 'flex', flexDirection: 'row', marginTop: 6}}>
-        <Text style={{fontSize: 14, textAlign: 'center'}}>Então clique</Text>
-        <TouchableOpacity>
-          <Text
-            style={{
-              fontSize: 14,
-              textAlign: 'center',
-              color: `#AF3476`,
-              marginLeft: 4,
-            }}>
-            aqui.
-          </Text>
-        </TouchableOpacity>
-      </View>
-    </Container>
+    <Swiper loop={LOOP_SWIPER} showsButtons={SHOW_ARROW_SWIPER}>
+      <Container>
+        <SwiperContainer
+          title="Ajude o meio ambiente"
+          description="Incentive seus amigos e vizinhos a descartar o lixo corretamente"
+        />
+      </Container>
+      <Container>
+        <SwiperContainer
+          title="É fácil"
+          description="Encontre pontos de reciclagem ​​ou crie pontos de coleta"
+        />
+      </Container>
+      <Container>
+        <SwiperContainer
+          title="Seja consciente"
+          description="Ajude o meio ambiente a continuar preservado"
+        />
+      </Container>
+    </Swiper>
   );
 };

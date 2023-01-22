@@ -2,6 +2,7 @@ export const COLORS = {
   'pink-100': '#F2C4DA',
   'pink-200': '#ECCEF5',
   'pink-300': '#F5A9F2',
+  'pink-400': '#AF3476',
 
   'white-100': '#fff',
 
