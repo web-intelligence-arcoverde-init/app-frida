@@ -5,7 +5,7 @@ import {SplashScreen} from '../screens';
 
 const Stack = createNativeStackNavigator();
 
-const App = () => {
+export const AppRouters = () => {
   return (
     <Stack.Navigator
       initialRouteName={'SplashScreen'}
@@ -14,5 +14,3 @@ const App = () => {
     </Stack.Navigator>
   );
 };
-
-export default App;
