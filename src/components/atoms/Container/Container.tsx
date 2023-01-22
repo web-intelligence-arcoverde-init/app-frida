@@ -32,5 +32,5 @@ export const Container = styled.View<ContainerProps>`
     color ? `${COLORS[color]}` : COLORS['white-100']};
   justify-content: ${({justify}) => (justify ? justify : 'flex-start')};
   align-items: ${({align}) => (align ? align : 'flex-start')};
-  padding: ${({padding}) => (padding ? padding : '0')}px;
+  padding: ${({padding}) => scale(padding ? padding : 10)}px;
 `;
