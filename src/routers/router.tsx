@@ -8,7 +8,7 @@ const Stack = createNativeStackNavigator();
 export const AppRouters = () => {
   return (
     <Stack.Navigator
-      initialRouteName={'IntroScreen'}
+      initialRouteName={'SplashScreen'}
       screenOptions={{headerShown: false}}>
       <Stack.Screen name="SplashScreen" component={SplashScreen} />
 
