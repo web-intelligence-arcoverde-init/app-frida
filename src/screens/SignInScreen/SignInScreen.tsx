@@ -9,7 +9,11 @@ import {
   Button,
 } from '../../components';
 
+import {useNavigationHook} from '../../hooks';
+
 export const SignInScreen = () => {
+  const {navigate} = useNavigationHook();
+
   return (
     <GestureMultiTouchContainer>
       <Container padding={24} align="center" justify="center">
@@ -40,7 +44,7 @@ export const SignInScreen = () => {
           <Text style={{fontSize: 14, textAlign: 'center'}}>
             Não tem uma conta?
           </Text>
-          <TouchableOpacity>
+          <TouchableOpacity onPress={() => navigate('SignUpScreen')}>
             <Text
               style={{
                 fontSize: 14,

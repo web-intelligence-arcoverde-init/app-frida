@@ -1,4 +1,5 @@
 import Logo from './logo.png';
+import LogoSemNome from './logo-sem-nome.png';
 import LogoNomeRosa from './logo-nome-rosa.png';
 
 import Intro01 from './example.jpg';
@@ -10,6 +11,7 @@ import SignInLogo from './example-02.jpg';
 
 export const IMAGES = {
   Logo,
+  LogoSemNome,
   LogoNomeRosa,
   Intro01,
   Intro02,
