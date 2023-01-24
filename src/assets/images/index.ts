@@ -6,6 +6,8 @@ import Intro02 from './example-01.jpg';
 import Intro03 from './example-04.jpg';
 import Intro04 from './example-03.jpg';
 
+import SignInLogo from './example-02.jpg';
+
 export const IMAGES = {
   Logo,
   LogoNomeRosa,
@@ -13,4 +15,5 @@ export const IMAGES = {
   Intro02,
   Intro03,
   Intro04,
+  SignInLogo,
 };
