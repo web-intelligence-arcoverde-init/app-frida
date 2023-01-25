@@ -2,20 +2,16 @@ import Logo from './logo.png';
 import LogoSemNome from './logo-sem-nome.png';
 import LogoNomeRosa from './logo-nome-rosa.png';
 
-import Intro01 from './example.jpg';
-import Intro02 from './example-01.jpg';
-import Intro03 from './example-04.jpg';
-import Intro04 from './example-03.jpg';
-
-import SignInLogo from './example-02.jpg';
+import IntroScreen01 from './intro-screen-01.png';
+import IntroScreen02 from './intro-screen-02.png';
+import IntroScreen03 from './intro-screen-03.png';
 
 export const IMAGES = {
   Logo,
   LogoSemNome,
   LogoNomeRosa,
-  Intro01,
-  Intro02,
-  Intro03,
-  Intro04,
-  SignInLogo,
+
+  IntroScreen01,
+  IntroScreen02,
+  IntroScreen03,
 };

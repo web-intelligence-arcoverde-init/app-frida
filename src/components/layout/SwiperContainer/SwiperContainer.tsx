@@ -18,7 +18,7 @@ export const SwiperContainer = ({
   footer,
 }: ISwiperContainer) => {
   return (
-    <Container align="center">
+    <Container align="center" justify="center">
       {children}
       <Separator height={18} />
       <Text style={{color: '#af3476'}} h2 h2Style={{fontSize: scale(24)}}>
@@ -27,6 +27,7 @@ export const SwiperContainer = ({
 
       <Separator height={8} />
       <Text style={{textAlign: 'center'}}>{description}</Text>
+      <Separator height={8} />
       {footer && footer}
     </Container>
   );
