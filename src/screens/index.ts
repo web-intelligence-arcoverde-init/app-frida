@@ -7,3 +7,5 @@ export {IntroScreen} from './IntroScreen/IntroScreen';
 export {SignInScreen} from './SignInScreen/SignInScreen';
 export {SignUpScreen} from './SignUpScreen/SignUpScreen';
 export {RecoveryAccountScreen} from './RecoveryAccountScreen/RecoveryAccountScreen';
+
+export {DashboardScreen} from './DashboardScreen/DashboardScreen';

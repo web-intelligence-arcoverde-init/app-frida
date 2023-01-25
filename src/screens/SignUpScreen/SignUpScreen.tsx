@@ -2,57 +2,42 @@ import {Text} from '@rneui/base';
 import {TouchableOpacity, View} from 'react-native';
 import {
   Container,
-  GestureMultiTouchContainer,
   Separator,
   TextInput,
   Button,
+  FooterRecoveryAccountMessage,
 } from '../../components';
 
+import {useNavigationHook} from '../../hooks';
+
 export const SignUpScreen = () => {
+  const {navigate} = useNavigationHook();
+
   return (
-    <GestureMultiTouchContainer>
-      <Container padding={22} align="center" justify="center">
-        <Text
-          h3
-          style={{
-            color: `#AF3476`,
-            textAlign: 'center',
-          }}>
-          Crie a sua conta aqui
-        </Text>
-        <Separator height={4} />
-        <Text style={{textAlign: 'center'}}>
-          Conecte-se e encontre ajuda hoje!
-        </Text>
+    <Container padding={18} align="center">
+      <Text
+        h3
+        style={{
+          color: `#AF3476`,
+          textAlign: 'center',
+        }}>
+        Crie a sua conta aqui
+      </Text>
+      <Separator height={4} />
+      <Text style={{textAlign: 'center'}}>
+        Conecte-se e encontre ajuda hoje!
+      </Text>
 
-        <Separator height={28} />
+      <Separator height={22} />
 
-        <TextInput />
-        <TextInput />
-        <TextInput />
+      <TextInput label="Nome" placeholder="Example" />
+      <TextInput label="Email" placeholder="Example" />
+      <TextInput label="Email" placeholder="Example" />
 
-        <Separator height={22} />
-        <Button />
+      <Separator height={8} />
+      <Button title="Criar" onPress={() => navigate('SignInScreen')} />
 
-        <Separator height={8} />
-
-        <View style={{display: 'flex', flexDirection: 'row', marginTop: 2}}>
-          <Text style={{fontSize: 14, textAlign: 'center'}}>
-            Já tem uma conta?
-          </Text>
-          <TouchableOpacity>
-            <Text
-              style={{
-                fontSize: 14,
-                textAlign: 'center',
-                color: `#AF3476`,
-                marginLeft: 4,
-              }}>
-              Recupere
-            </Text>
-          </TouchableOpacity>
-        </View>
-      </Container>
-    </GestureMultiTouchContainer>
+      <FooterRecoveryAccountMessage />
+    </Container>
   );
 };

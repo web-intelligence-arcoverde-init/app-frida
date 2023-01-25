@@ -1,26 +1,29 @@
 import {Input} from '@rneui/base';
 
-export const TextInput = () => {
+const inputContainerStyle = {
+  borderWidth: 1,
+  padding: 0,
+  borderRadius: 10,
+  marginTop: 6,
+  borderColor: 'rgba(0, 0, 0, 0.4)',
+};
+
+const errorMessageStyle = {color: '#AF3476'};
+
+export const TextInput = ({label, placeholder, secureTextEntry}: any) => {
   return (
     <Input
-      containerStyle={{}}
-      inputContainerStyle={{
-        borderWidth: 1,
-        padding: 10,
-        borderRadius: 10,
-        marginTop: 6,
-        borderColor: 'rgba(0, 0, 0, 0.4)',
-      }}
-      errorMessage="Oops! that's not correct."
-      errorStyle={{color: '#AF3476'}}
+      containerStyle={{paddingHorizontal: 0}}
+      inputContainerStyle={inputContainerStyle}
+      errorStyle={errorMessageStyle}
       errorProps={{}}
-      inputStyle={{}}
-      label="Email"
-      labelStyle={{color: '#695C5C', fontWeight: '400', lineHeight: 21}}
+      label={label}
+      labelStyle={{}}
       labelProps={{}}
       leftIconContainerStyle={{}}
       rightIconContainerStyle={{}}
-      placeholder="Informe seu email"
+      placeholder={placeholder}
+      secureTextEntry={secureTextEntry}
     />
   );
 };

@@ -2,7 +2,7 @@ import {Image, TouchableOpacity, View} from 'react-native';
 import {Text} from '@rneui/themed';
 
 import {IMAGES} from '../../assets';
-import {Container, GestureMultiTouchContainer, Button} from '../../components';
+import {Container, Button} from '../../components';
 
 import {useNavigationHook} from '../../hooks';
 

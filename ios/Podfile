@@ -17,6 +17,9 @@ target 'AppFrida' do
 
   # Flags change depending on the env values.
   flags = get_default_flags()
+  
+  
+  pod 'TouchID', :path => "../node_modules/react-native-touch-id"
 
   use_react_native!(
     :path => config[:reactNativePath],
