@@ -7,7 +7,9 @@ export const FooterRecoveryAccountMessage = () => {
 
   return (
     <View style={{display: 'flex', flexDirection: 'row', marginTop: 8}}>
-      <Text style={{fontSize: 14, textAlign: 'center'}}>Já tem uma conta?</Text>
+      <Text style={{fontSize: 14, textAlign: 'center'}}>
+        Já tem uma conta? Então recupere
+      </Text>
       <TouchableOpacity onPress={() => navigate('RecoveryAccountScreen')}>
         <Text
           style={{
@@ -16,7 +18,7 @@ export const FooterRecoveryAccountMessage = () => {
             color: `#AF3476`,
             marginLeft: 4,
           }}>
-          Recupere
+          aqui
         </Text>
       </TouchableOpacity>
     </View>

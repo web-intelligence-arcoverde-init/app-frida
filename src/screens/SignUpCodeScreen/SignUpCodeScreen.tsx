@@ -12,7 +12,7 @@ import {
 
 import {useNavigationHook} from '../../hooks';
 
-export const SignUpScreen = () => {
+export const SignUpCodeScreen = () => {
   const {navigate} = useNavigationHook();
 
   return (
