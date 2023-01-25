@@ -1,9 +1,10 @@
 import {Button} from '@rneui/base';
 
-export const CustomButton = () => {
+export const CustomButton = ({onPress, title}: any) => {
   return (
     <Button
-      title="Entrar"
+      onPress={() => onPress()}
+      title={title}
       containerStyle={{
         borderRadius: 10,
         width: '100%',

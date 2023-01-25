@@ -28,7 +28,6 @@ export const SwiperContainer = ({
 
       <Separator height={4} />
       <Text style={{textAlign: 'center'}}>{description}</Text>
-      <Separator height={8} />
       {footer && footer}
     </Container>
   );
