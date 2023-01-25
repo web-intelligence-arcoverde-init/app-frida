@@ -37,7 +37,7 @@ export const SignUpScreen = () => {
       />
 
       <Separator height={8} />
-      <Button title="Continue" onPress={() => navigate('SignInScreen')} />
+      <Button title="Continue" onPress={() => navigate('SignUpCodeScreen')} />
 
       <FooterRecoveryAccountMessage />
     </Container>

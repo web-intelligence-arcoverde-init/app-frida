@@ -17,30 +17,28 @@ export const SignInScreen = () => {
   return (
     <GestureMultiTouchContainer>
       <Container padding={24} align="center" justify="center">
-        <TextInput />
-        <Separator height={20} />
-        <TextInput />
+        <TextInput label="Email" placeholder="Informe aqui sua email" />
+        <TextInput label="Senha" placeholder="Informe aqui sua senha" />
 
-        <Separator height={12} />
-
-        <TouchableOpacity style={{width: '100%'}}>
+        <TouchableOpacity
+          style={{width: '100%'}}
+          onPress={() => navigate('RecoveryAccountScreen')}>
           <Text
             style={{
               fontSize: 14,
               textAlign: 'right',
               color: `#AF3476`,
-              marginLeft: 4,
             }}>
             Esqueceu a senha?
           </Text>
         </TouchableOpacity>
 
-        <Separator height={32} />
-        <Button />
+        <Separator height={22} />
+        <Button title="Entrar" onPress={() => navigate('DashboardScreen')} />
 
-        <Separator height={32} />
+        <Separator height={22} />
 
-        <View style={{display: 'flex', flexDirection: 'row', marginTop: 2}}>
+        <View style={{display: 'flex', flexDirection: 'row'}}>
           <Text style={{fontSize: 14, textAlign: 'center'}}>
             Não tem uma conta?
           </Text>

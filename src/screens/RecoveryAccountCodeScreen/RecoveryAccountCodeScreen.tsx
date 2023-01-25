@@ -18,7 +18,7 @@ import {Container, Separator, Button} from '../../components';
 
 import {useNavigationHook} from '../../hooks';
 
-export const SignUpCodeScreen = () => {
+export const RecoveryAccountCodeScreen = () => {
   const {navigate} = useNavigationHook();
 
   const [value, setValue] = useState('');
@@ -84,7 +84,10 @@ export const SignUpCodeScreen = () => {
       </TouchableOpacity>
 
       <Separator height={12} />
-      <Button title="Continuar" onPress={() => navigate('SignUpFormScreen')} />
+      <Button
+        title="Continuar"
+        onPress={() => navigate('RecoveryAccountFormScreen')}
+      />
     </Container>
   );
 };
