@@ -4,3 +4,5 @@ https://medium.com/react-native-training/integrate-touch-id-and-face-id-to-your-
 ## Dicas
 
 - adicionar absolute path nos arquivos
+- remover images que estiver com nome intro
+- procurar imagens com fundo branco ou remover o fundo das outras que já existem
