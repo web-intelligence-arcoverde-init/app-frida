@@ -1,4 +1,4 @@
-import React, {useEffect, useRef, useState} from 'react';
+import React, {useState} from 'react';
 import {TouchableOpacity, View} from 'react-native';
 
 import {
@@ -17,7 +17,7 @@ const CELL_COUNT = 4;
 import {Container, Separator, Button} from '../../components';
 
 import {useNavigationHook} from '../../hooks';
-import {useChronometerHook} from '../../hooks/useChronometerHook';
+import {useChronometerHook} from '../../hooks/';
 
 export const SignUpCodeScreen = () => {
   const {navigate} = useNavigationHook();
@@ -71,7 +71,7 @@ export const SignUpCodeScreen = () => {
             key={index}
             style={[styles.cell, isFocused && styles.focusCell]}
             onLayout={getCellOnLayoutHandler(index)}>
-            {symbol || (isFocused ? <Cursor /> : <Cursor />)}
+            {symbol || (isFocused ? <Cursor /> : null)}
           </Text>
         )}
       />

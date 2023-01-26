@@ -13,6 +13,7 @@ import {
   SignUpFormScreen,
   RecoveryAccountCodeScreen,
   RecoveryAccountFormScreen,
+  AlertScreen,
 } from '../screens';
 
 const Stack = createNativeStackNavigator();
@@ -47,6 +48,8 @@ export const AppRouters = () => {
       />
 
       <Stack.Screen name="DashboardScreen" component={DashboardScreen} />
+
+      <Stack.Screen name="AlertScreen" component={AlertScreen} />
     </Stack.Navigator>
   );
 };

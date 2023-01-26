@@ -16,7 +16,7 @@ const CELL_COUNT = 4;
 
 import {Container, Separator, Button} from '../../components';
 
-import {useNavigationHook} from '../../hooks';
+import {useNavigationHook, useChronometerHook} from '../../hooks';
 
 export const RecoveryAccountCodeScreen = () => {
   const {navigate} = useNavigationHook();
@@ -28,7 +28,11 @@ export const RecoveryAccountCodeScreen = () => {
     setValue,
   });
 
-  const [timeResendCode, setTimeResentCode] = useState(10);
+  const {handleStart, chronometer} = useChronometerHook();
+
+  function resendCodeConfirmation() {
+    handleStart();
+  }
 
   return (
     <Container padding={18} align="center" justify="center">
@@ -39,7 +43,7 @@ export const RecoveryAccountCodeScreen = () => {
             color: `#AF3476`,
             textAlign: 'center',
           }}>
-          {timeResendCode}
+          {chronometer}
         </Text>
         <Separator height={2} />
         <Text
@@ -66,7 +70,7 @@ export const RecoveryAccountCodeScreen = () => {
             key={index}
             style={[styles.cell, isFocused && styles.focusCell]}
             onLayout={getCellOnLayoutHandler(index)}>
-            {symbol || (isFocused ? <Cursor /> : <Cursor />)}
+            {symbol || (isFocused ? <Cursor /> : null)}
           </Text>
         )}
       />
@@ -74,6 +78,7 @@ export const RecoveryAccountCodeScreen = () => {
       <Separator height={12} />
 
       <TouchableOpacity
+        onPress={() => resendCodeConfirmation()}
         style={{width: '100%', alignItems: 'flex-end', marginRight: 40}}>
         <Text
           style={{

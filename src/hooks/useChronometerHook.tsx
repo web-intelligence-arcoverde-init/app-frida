@@ -29,8 +29,8 @@ const STATUS = {
   STOPPED: 'Stopped',
 };
 
-export const useChronometerHook = () => {
-  const [secondsRemaining, setSecondsRemaining] = useState(INITIAL_COUNT);
+export const useChronometerHook = (initialCount = INITIAL_COUNT) => {
+  const [secondsRemaining, setSecondsRemaining] = useState(initialCount);
   const [status, setStatus] = useState(STATUS.STOPPED);
 
   const secondsToDisplay = secondsRemaining % 60;
@@ -42,7 +42,7 @@ export const useChronometerHook = () => {
   }, []);
 
   const handleStart = () => {
-    setSecondsRemaining(INITIAL_COUNT);
+    setSecondsRemaining(initialCount);
 
     setStatus(STATUS.STARTED);
   };
