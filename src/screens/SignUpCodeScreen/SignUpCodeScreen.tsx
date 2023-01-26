@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import {TouchableOpacity, View} from 'react-native';
 
 import {
@@ -17,6 +17,7 @@ const CELL_COUNT = 4;
 import {Container, Separator, Button} from '../../components';
 
 import {useNavigationHook} from '../../hooks';
+import {useChronometerHook} from '../../hooks/useChronometerHook';
 
 export const SignUpCodeScreen = () => {
   const {navigate} = useNavigationHook();
@@ -28,7 +29,11 @@ export const SignUpCodeScreen = () => {
     setValue,
   });
 
-  const [timeResendCode, setTimeResentCode] = useState(10);
+  const {handleStart, chronometer} = useChronometerHook();
+
+  function resendCodeConfirmation() {
+    handleStart();
+  }
 
   return (
     <Container padding={18} align="center" justify="center">
@@ -39,7 +44,7 @@ export const SignUpCodeScreen = () => {
             color: `#AF3476`,
             textAlign: 'center',
           }}>
-          {timeResendCode}
+          {chronometer}
         </Text>
         <Separator height={2} />
         <Text
@@ -74,12 +79,13 @@ export const SignUpCodeScreen = () => {
       <Separator height={12} />
 
       <TouchableOpacity
+        onPress={() => resendCodeConfirmation()}
         style={{width: '100%', alignItems: 'flex-end', marginRight: 40}}>
         <Text
           style={{
             color: `#AF3476`,
           }}>
-          reenviar código
+          Reenviar código
         </Text>
       </TouchableOpacity>
 

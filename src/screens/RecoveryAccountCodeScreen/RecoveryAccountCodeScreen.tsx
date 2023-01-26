@@ -79,7 +79,7 @@ export const RecoveryAccountCodeScreen = () => {
           style={{
             color: `#AF3476`,
           }}>
-          reenviar código
+          Reenviar código
         </Text>
       </TouchableOpacity>
 
