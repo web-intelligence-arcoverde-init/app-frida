@@ -3,6 +3,10 @@ https://medium.com/react-native-training/integrate-touch-id-and-face-id-to-your-
 
 https://reactnative.dev/docs/debugging.html#react-developer-tools
 
+## configurando para gerar apk
+
+- https://www.youtube.com/watch?v=HuPK62LHCms&t=17s
+
 ## Dicas
 
 - adicionar absolute path nos arquivos
