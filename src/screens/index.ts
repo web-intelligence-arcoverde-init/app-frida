@@ -1,7 +1,5 @@
-export {AlertScreen} from './AlertScreen/AlertScreen';
-
 export {SplashScreen} from './SplashScreen/SplashScreen';
-export {HomeScreen} from './HomeScreen/IntroScreen';
+export {HomeScreen} from './HomeScreen/HomeScreen';
 export {IntroScreen} from './IntroScreen/IntroScreen';
 
 export {SignInScreen} from './SignInScreen/SignInScreen';
@@ -15,3 +13,6 @@ export {RecoveryAccountCodeScreen} from './RecoveryAccountCodeScreen/RecoveryAcc
 export {RecoveryAccountFormScreen} from './RecoveryAccountFormScreen/RecoveryAccountFormScreen';
 
 export {DashboardScreen} from './DashboardScreen/DashboardScreen';
+export {PublicAgenciesScreen} from './PublicAgenciesScreen/PublicAgenciesScreen';
+export {HelpersScreen} from './HelpersScreen/HelpersScreen';
+export {AlertScreen} from './AlertScreen/AlertScreen';

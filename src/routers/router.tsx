@@ -16,6 +16,8 @@ import {
   AlertScreen,
 } from '../screens';
 
+import BottomRouter from './bottom.routes';
+
 const Stack = createNativeStackNavigator();
 
 export const AppRouters = () => {
@@ -47,7 +49,7 @@ export const AppRouters = () => {
         component={RecoveryAccountCodeScreen}
       />
 
-      <Stack.Screen name="DashboardScreen" component={DashboardScreen} />
+      <Stack.Screen name="DashboardScreen" component={BottomRouter} />
 
       <Stack.Screen name="AlertScreen" component={AlertScreen} />
     </Stack.Navigator>

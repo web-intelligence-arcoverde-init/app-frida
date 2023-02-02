@@ -5,6 +5,7 @@ import {IMAGES} from '../../assets';
 import {Container, Button} from '../../components';
 
 import {useNavigationHook} from '../../hooks';
+import {scale} from '../../utils';
 
 const {LogoNomeRosa} = IMAGES;
 
@@ -13,23 +14,28 @@ export const HomeScreen = () => {
 
   return (
     <Container padding={24} align="center" justify="center">
-      <Image source={LogoNomeRosa} />
-      <Button title="Junte-se" onPress={() => navigate('SignUpScreen')} />
+      <Image
+        source={LogoNomeRosa}
+        style={{width: scale(280), height: scale(360)}}
+      />
+      <Button title="Entrar" onPress={() => navigate('SignInScreen')} />
       <Text
         style={{
-          fontSize: 14,
+          fontSize: scale(12),
           textAlign: 'center',
-          marginTop: 20,
+          marginTop: scale(12),
         }}>
-        Já faz parte ?
+        Ainda não faz parte ?
       </Text>
 
       <View style={{display: 'flex', flexDirection: 'row', marginTop: 2}}>
-        <Text style={{fontSize: 14, textAlign: 'center'}}>Então clique</Text>
-        <TouchableOpacity onPress={() => navigate('SignInScreen')}>
+        <Text style={{fontSize: scale(12), textAlign: 'center'}}>
+          Então clique
+        </Text>
+        <TouchableOpacity onPress={() => navigate('SignUpScreen')}>
           <Text
             style={{
-              fontSize: 14,
+              fontSize: scale(12),
               textAlign: 'center',
               color: `#AF3476`,
               marginLeft: 4,

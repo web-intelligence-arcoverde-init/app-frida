@@ -9,7 +9,9 @@ const {width} = Dimensions.get('screen');
 import {IMAGES} from '../../assets';
 import {useNavigationHook} from '../../hooks';
 
-const {IntroScreen01, IntroScreen02, IntroScreen03} = IMAGES;
+import {scale} from '../../utils';
+
+const {IntroScreen01, IntroScreen02, IntroScreen03, Example1} = IMAGES;
 
 export const IntroScreen = () => {
   const {navigate} = useNavigationHook();
@@ -20,21 +22,25 @@ export const IntroScreen = () => {
         <SwiperContainer
           title="What is Lorem Ipsum?"
           description="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s">
-          <Image source={IntroScreen01} style={{width: width, height: 400}} />
+          <Image
+            source={IntroScreen02}
+            resizeMode="cover"
+            style={{
+              width: scale(width),
+              height: scale(300),
+              top: scale(-30),
+            }}
+          />
         </SwiperContainer>
       </Container>
       <Container>
         <SwiperContainer
           title="What is Lorem Ipsum?"
           description="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s">
-          <Image source={IntroScreen02} style={{width: width, height: 400}} />
-        </SwiperContainer>
-      </Container>
-      <Container>
-        <SwiperContainer
-          title="What is Lorem Ipsum?"
-          description="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s">
-          <Image source={IntroScreen03} style={{width: width, height: 400}} />
+          <Image
+            source={Example1}
+            style={{width: scale(width), height: scale(300), top: scale(-30)}}
+          />
         </SwiperContainer>
       </Container>
       <Container>
@@ -44,7 +50,10 @@ export const IntroScreen = () => {
           }
           title="What is Lorem Ipsum?"
           description="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s">
-          <Image source={IntroScreen01} style={{width: width, height: 400}} />
+          <Image
+            source={IntroScreen01}
+            style={{width: scale(width), height: scale(300)}}
+          />
         </SwiperContainer>
       </Container>
     </Swiper>

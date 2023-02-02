@@ -12,6 +12,8 @@ import styles from './style';
 
 import {Text} from '@rneui/base';
 
+import {scale, METRICS} from '../../utils';
+
 const CELL_COUNT = 4;
 
 import {Container, Separator, Button} from '../../components';
@@ -50,8 +52,10 @@ export const SignUpCodeScreen = () => {
         <Text
           style={{
             textAlign: 'center',
+            fontSize: METRICS.font.small,
+            color: '#000',
           }}>
-          nós lhe enviaremos um texto com seu número de confirmação.
+          Nós lhe enviaremos um texto com seu número de confirmação.
         </Text>
       </View>
 
@@ -80,10 +84,16 @@ export const SignUpCodeScreen = () => {
 
       <TouchableOpacity
         onPress={() => resendCodeConfirmation()}
-        style={{width: '100%', alignItems: 'flex-end', marginRight: 40}}>
+        style={{
+          width: '100%',
+          alignItems: 'flex-end',
+          marginRight: METRICS.insideSpacingXMedium,
+        }}>
         <Text
           style={{
             color: `#AF3476`,
+            fontSize: METRICS.font.small,
+            fontWeight: 'bold',
           }}>
           Reenviar código
         </Text>

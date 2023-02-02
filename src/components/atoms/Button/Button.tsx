@@ -1,4 +1,5 @@
 import {Button} from '@rneui/base';
+import {scale} from '../../../utils';
 
 export const CustomButton = ({onPress, title}: any) => {
   return (
@@ -11,7 +12,7 @@ export const CustomButton = ({onPress, title}: any) => {
       }}
       buttonStyle={{
         backgroundColor: `#AF3476`,
-        height: 48,
+        height: scale(48),
       }}
     />
   );

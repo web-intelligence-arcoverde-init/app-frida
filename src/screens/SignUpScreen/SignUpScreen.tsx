@@ -12,6 +12,8 @@ import {
 
 import {useNavigationHook} from '../../hooks';
 
+import {METRICS} from '../../utils';
+
 export const SignUpScreen = () => {
   const {navigate} = useNavigationHook();
 
@@ -26,17 +28,19 @@ export const SignUpScreen = () => {
           Digite seu número de telefone
         </Text>
         <Separator height={2} />
-        <Text>nós lhe enviaremos um texto com seu número de confirmação.</Text>
+        <Text style={{color: '#000', fontSize: METRICS.font.small}}>
+          nós lhe enviaremos um texto com seu número de confirmação.
+        </Text>
       </View>
 
-      <Separator height={22} />
+      <Separator height={18} />
 
       <TextInput
         label="Numero de celular"
         placeholder="Digite seu numero aqui"
       />
 
-      <Separator height={8} />
+      <Separator height={18} />
       <Button title="Continue" onPress={() => navigate('SignUpCodeScreen')} />
 
       <FooterRecoveryAccountMessage />

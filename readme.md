@@ -7,6 +7,8 @@ https://reactnative.dev/docs/debugging.html#react-developer-tools
 
 - https://www.youtube.com/watch?v=HuPK62LHCms&t=17s
 
+- https://www.figma.com/proto/qCTqYykS20JBfq3kzrGpHe?kind=&node-id=421%3A3364&page-id=254%3A104&scaling=scale-down&starting-point-node-id=421%3A3153&viewport=-4949%2C508%2C0.7006706595420837&fuid=776046032362651239
+
 ## Dicas
 
 - adicionar absolute path nos arquivos
