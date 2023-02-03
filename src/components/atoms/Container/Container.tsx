@@ -22,6 +22,8 @@ export const StyledContainer = styled.View<ContainerProps>`
   width: ${({width}) => scale(width ? width : 100)}%;
   height: ${({height}) => scale(height ? height : 100)}%;
   padding: ${({padding}) => scale(padding ? padding : 0)}px;
+  vertical-align: ${({verticalPadding}) =>
+    scale(verticalPadding ? verticalPadding : 0)}px;
 `;
 
 export const Container = styled.View<ContainerProps>`
