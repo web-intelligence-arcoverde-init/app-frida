@@ -1,6 +1,7 @@
 import {Text} from '@rneui/base';
 import React from 'react';
 import {View} from 'react-native';
+import {METRICS} from '../../utils';
 
 import {
   Container,
@@ -11,8 +12,6 @@ import {
 } from '../../components';
 
 import {useNavigationHook} from '../../hooks';
-
-import {METRICS} from '../../utils';
 
 export const SignUpScreen = () => {
   const {navigate} = useNavigationHook();

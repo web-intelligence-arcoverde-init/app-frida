@@ -1,16 +1,11 @@
 import React from 'react';
 
-import Icon from 'react-native-vector-icons/Entypo';
-import MaterialIcons from 'react-native-vector-icons/MaterialCommunityIcons';
-import FoundationIcon from 'react-native-vector-icons/Foundation';
-
 import FontWaesome from 'react-native-vector-icons/FontAwesome';
 
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 
 import IconsHome from 'react-native-vector-icons/Ionicons';
 import IconsFeather from 'react-native-vector-icons/Feather';
-import IconsOcticons from 'react-native-vector-icons/Octicons';
 
 const icons = [
   {name: 'log-out', class: 'feather'},
@@ -55,7 +50,7 @@ const TabBarNavigation = () => {
       <Tab.Screen
         name="PublicAgenciesScreen"
         options={{
-          title: 'órgãos',
+          title: 'Serviços',
           tabBarIcon: () => <FontWaesome name="building-o" size={30} />,
         }}
         component={PublicAgenciesScreen}
@@ -65,7 +60,7 @@ const TabBarNavigation = () => {
         name="HelpersScreen"
         component={HelpersScreen}
         options={{
-          title: 'Ajuda',
+          title: 'Contatos',
           tabBarIcon: () => <IconsFeather name="phone-call" size={30} />,
         }}
       />

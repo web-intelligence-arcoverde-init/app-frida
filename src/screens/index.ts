@@ -16,3 +16,5 @@ export {DashboardScreen} from './DashboardScreen/DashboardScreen';
 export {PublicAgenciesScreen} from './PublicAgenciesScreen/PublicAgenciesScreen';
 export {HelpersScreen} from './HelpersScreen/HelpersScreen';
 export {AlertScreen} from './AlertScreen/AlertScreen';
+
+export {AddHelperContact} from './AddHelperContact/AddHelperContact';

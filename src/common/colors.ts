@@ -10,6 +10,7 @@ export const COLORS = {
   'black-200': '#151515',
   'black-300': '#2E2E2E',
 
+  'gray-50': '#FAFAFA',
   'gray-100': '#E6E6E6',
   'gray-200': '#A4A4A4',
   'gray-300': '#A4A4A4',

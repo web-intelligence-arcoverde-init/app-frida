@@ -3,7 +3,6 @@ import {Image} from 'react-native';
 
 import {useNavigationHook} from '../../hooks';
 
-import {PADDING_SIDE, scale} from '../../utils';
 import {Container} from '../../components';
 import {IMAGES} from '../../assets';
 
@@ -18,12 +17,8 @@ export const SplashScreen = () => {
   }, []);
 
   return (
-    <Container
-      padding={PADDING_SIDE}
-      align="center"
-      justify="center"
-      color="pink-100">
-      <Image source={Logo} style={{width: scale(280), height: scale(360)}} />
+    <Container padding={18} align="center" justify="center" color="pink-100">
+      <Image source={Logo} style={{width: 280, height: 360}} />
     </Container>
   );
 };

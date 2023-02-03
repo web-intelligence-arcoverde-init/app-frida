@@ -1,13 +1,14 @@
 import {Text} from '@rneui/base';
-import {Container, Separator} from '../../components';
+import {Container, Separator, Button} from '../../components';
 import {View} from 'react-native';
 import {METRICS} from '../../utils';
-
-import Icon from 'react-native-vector-icons/Ionicons';
+import {useNavigationHook} from '../../hooks';
 
 export const HelpersScreen = () => {
+  const {navigate} = useNavigationHook();
+
   return (
-    <Container verticalPadding={18}>
+    <Container verticalPadding={18} color="gray-50">
       <Separator height={METRICS.topBarContainerPadding} />
       <View
         style={{
@@ -17,8 +18,9 @@ export const HelpersScreen = () => {
           width: '100%',
         }}>
         <Text h4>Contatos de emergencia</Text>
-        <Icon name="ios-add" size={20} />
       </View>
+      <Separator height={METRICS.insideSpacingXSmall} />
+      <Button title="Adicionar" onPress={() => navigate('AddHelperContact')} />
     </Container>
   );
 };

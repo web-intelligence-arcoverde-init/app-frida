@@ -5,7 +5,7 @@ import {
   SplashScreen,
   IntroScreen,
   HomeScreen,
-  DashboardScreen,
+  AddHelperContact,
   SignInScreen,
   SignUpScreen,
   RecoveryAccountScreen,
@@ -52,6 +52,7 @@ export const AppRouters = () => {
       <Stack.Screen name="DashboardScreen" component={BottomRouter} />
 
       <Stack.Screen name="AlertScreen" component={AlertScreen} />
+      <Stack.Screen name="AddHelperContact" component={AddHelperContact} />
     </Stack.Navigator>
   );
 };

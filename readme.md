@@ -16,3 +16,7 @@ https://reactnative.dev/docs/debugging.html#react-developer-tools
 - procurar imagens com fundo branco ou remover o fundo das outras que já existem
 - ajustar width dos input
 - ajustar espaçamento interno dos inputs
+
+# TASKS 03/02/2023
+
+- [] - adicionar https://github.com/michalchudziak/react-native-geolocation

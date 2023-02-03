@@ -1,6 +1,11 @@
 import React, {useState} from 'react';
 import {TouchableOpacity, View} from 'react-native';
 
+import {Container, Separator, Button} from '../../components';
+import {useNavigationHook, useChronometerHook} from '../../hooks';
+
+import {METRICS} from '../../utils';
+
 import {
   CodeField,
   Cursor,
@@ -12,14 +17,7 @@ import styles from './style';
 
 import {Text} from '@rneui/base';
 
-import {scale, METRICS} from '../../utils';
-
 const CELL_COUNT = 4;
-
-import {Container, Separator, Button} from '../../components';
-
-import {useNavigationHook} from '../../hooks';
-import {useChronometerHook} from '../../hooks/';
 
 export const SignUpCodeScreen = () => {
   const {navigate} = useNavigationHook();
