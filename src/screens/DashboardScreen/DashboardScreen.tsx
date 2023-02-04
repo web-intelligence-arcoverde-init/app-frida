@@ -11,7 +11,7 @@ import {View} from 'react-native';
 export const DashboardScreen = () => {
   return (
     <GestureMultiTouchContainer>
-      <Container verticalPadding={18}>
+      <Container verticalPadding={18} color="gray-50">
         <Separator height={METRICS.topBarContainerPadding} />
         <View
           style={{
@@ -19,18 +19,11 @@ export const DashboardScreen = () => {
             alignItems: 'center',
             justifyContent: 'space-between',
             width: '100%',
+            backgroundColor: 'white',
+            borderRadius: 20,
+            padding: 20,
           }}>
           <Text h4>Dashboard</Text>
-        </View>
-
-        <View
-          style={{
-            flexDirection: 'row',
-            alignItems: 'center',
-            justifyContent: 'space-between',
-            width: '100%',
-          }}>
-          <Text h4>Informações</Text>
         </View>
       </Container>
     </GestureMultiTouchContainer>

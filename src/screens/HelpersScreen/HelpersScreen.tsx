@@ -4,6 +4,8 @@ import {View} from 'react-native';
 import {METRICS} from '../../utils';
 import {useNavigationHook} from '../../hooks';
 
+import Icon from 'react-native-vector-icons/Ionicons';
+
 export const HelpersScreen = () => {
   const {navigate} = useNavigationHook();
 
@@ -16,11 +18,21 @@ export const HelpersScreen = () => {
           alignItems: 'center',
           justifyContent: 'space-between',
           width: '100%',
+          backgroundColor: '#AF3476',
+          padding: 12,
+          borderRadius: 20,
         }}>
-        <Text h4>Contatos de emergencia</Text>
+        <Text h4 style={{color: 'white'}}>
+          Contatos de emergencia
+        </Text>
+        <Icon
+          name="ios-add"
+          size={40}
+          color="#fff"
+          onPress={() => navigate('AddHelperContact')}
+        />
       </View>
       <Separator height={METRICS.insideSpacingXSmall} />
-      <Button title="Adicionar" onPress={() => navigate('AddHelperContact')} />
     </Container>
   );
 };
