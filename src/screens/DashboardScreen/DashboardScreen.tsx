@@ -8,6 +8,9 @@ import {METRICS} from '../../utils';
 import {Text} from '@rneui/base';
 import {View} from 'react-native';
 
+import Geolocation from '@react-native-community/geolocation';
+import {useEffect} from 'react';
+
 export const DashboardScreen = () => {
   return (
     <GestureMultiTouchContainer>
