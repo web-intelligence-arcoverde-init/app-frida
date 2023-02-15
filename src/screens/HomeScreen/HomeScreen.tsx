@@ -2,6 +2,7 @@ import {
   Alert,
   Image,
   PermissionsAndroid,
+  TextInput,
   TouchableOpacity,
   View,
 } from 'react-native';
@@ -16,22 +17,14 @@ import {scale} from '../../utils';
 const {LogoNomeRosa} = IMAGES;
 
 import Geolocation from '@react-native-community/geolocation';
-import {useEffect, useState} from 'react';
-
-const authorizationLevelOptions: ('whenInUse' | 'always' | 'auto')[] = [
-  'whenInUse',
-  'always',
-  'auto',
-];
-
-const locationProviderOptions: ('playServices' | 'android' | 'auto')[] = [
-  'playServices',
-  'android',
-  'auto',
-];
+import React, {useCallback, useEffect, useState} from 'react';
+import {Linking} from 'react-native';
+import {Input} from '@rneui/base';
 
 export const HomeScreen = () => {
   const {navigate} = useNavigationHook();
+
+  const [position, setPosition] = useState({latidude: 0, longitude: 0});
 
   const [skipPermissionRequests, setSkipPermissionRequests] = useState(false);
   const [authorizationLevel, setAuthorizationLevel] = useState<
@@ -43,30 +36,23 @@ export const HomeScreen = () => {
   >('auto');
 
   const requestAuthorization = async () => {
-    const authorization = await Geolocation.requestAuthorization();
-
-    console.log(authorization);
+    console.log(Geolocation);
   };
 
-  const watchPosition = () => {
-    try {
-      const watchID = Geolocation.watchPosition(
-        position => {
-          setPosition(JSON.stringify(position));
-        },
-        error => Alert.alert('WatchPosition Error', JSON.stringify(error)),
-      );
-      setSubscriptionId(watchID);
-    } catch (error) {
-      Alert.alert('WatchPosition Error', JSON.stringify(error));
-    }
-  };
-
-  const clearWatch = () => {
-    subscriptionId !== null && Geolocation.clearWatch(subscriptionId);
-    setSubscriptionId(null);
-    setPosition(null);
-  };
+  useEffect(() => {
+    Geolocation.watchPosition(
+      position => {
+        setPosition({
+          latidude: position.coords.latitude,
+          longitude: position.coords.longitude,
+        });
+      },
+      error => Alert.alert('WatchPosition Error', JSON.stringify(error)),
+      {
+        enableHighAccuracy: true,
+      },
+    );
+  }, []);
 
   useEffect(() => {
     Geolocation.setRNConfiguration({
@@ -76,41 +62,40 @@ export const HomeScreen = () => {
     });
   }, [skipPermissionRequests, authorizationLevel, locationProvider]);
 
-  const [position, setPosition] = useState<string | null>(null);
-  const [subscriptionId, setSubscriptionId] = useState<number | null>(null);
-  useEffect(() => {
-    return () => {
-      clearWatch();
-    };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  console.log(position);
 
-  const getCurrentPosition = () => {
-    Geolocation.getCurrentPosition(
-      pos => {
-        console.log(JSON.stringify(pos));
-      },
-      error => Alert.alert('GetCurrentPosition Error', JSON.stringify(error)),
-      {enableHighAccuracy: true},
-    );
-  };
+  const url = position
+    ? `https://www.google.com/maps?q=${position.latidude},${position.longitude}`
+    : '';
 
-  useEffect(() => {
-    watchPosition();
-    getCurrentPosition();
-  }, []);
+  const handlePress = useCallback(async () => {
+    // Checking if the link is supported for links with custom URL scheme.
+
+    const supported = await Linking.canOpenURL(url);
+
+    if (supported) {
+      // Opening the link with some app, if the URL scheme is "http" the web link should be opened
+      // by some browser in the mobile
+      await Linking.openURL(url);
+    } else {
+      Alert.alert(`Don't know how to open this URL: ${url}`);
+    }
+  }, [url]);
 
   return (
     <Container padding={24} align="center" justify="center">
-      <Image
-        source={LogoNomeRosa}
-        style={{width: scale(280), height: scale(360)}}
+      <Text>{JSON.stringify(position)}</Text>
+
+      <TextInput
+        editable
+        multiline
+        numberOfLines={4}
+        value={url}
+        style={{
+          marginTop: scale(12),
+        }}
       />
-      {subscriptionId !== null ? (
-        <Button title="Clear Watch" onPress={clearWatch} />
-      ) : (
-        <Button title="Watch Position" onPress={watchPosition} />
-      )}
+
       <Text
         style={{
           fontSize: scale(12),

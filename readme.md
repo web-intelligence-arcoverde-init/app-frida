@@ -19,4 +19,22 @@ https://reactnative.dev/docs/debugging.html#react-developer-tools
 
 # TASKS 03/02/2023
 
-- [] - adicionar https://github.com/michalchudziak/react-native-geolocation
+- [x] - adicionar https://github.com/michalchudziak/react-native-geolocation
+
+# Comandos básicos
+
+## Listar devides
+
+- emulator -list-avds
+
+## Rodar devices
+
+- emulator -avd avd_name
+
+## Instalar dependencias no ios
+
+- npx pod-install
+
+## Limpar task do projeto
+
+- cd android ./gradlew clean
