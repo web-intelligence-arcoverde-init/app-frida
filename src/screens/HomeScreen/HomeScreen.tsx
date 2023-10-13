@@ -19,7 +19,6 @@ const {LogoNomeRosa} = IMAGES;
 import Geolocation from '@react-native-community/geolocation';
 import React, {useCallback, useEffect, useState} from 'react';
 import {Linking} from 'react-native';
-import {Input} from '@rneui/base';
 
 export const HomeScreen = () => {
   const {navigate} = useNavigationHook();
@@ -50,6 +49,9 @@ export const HomeScreen = () => {
       error => Alert.alert('WatchPosition Error', JSON.stringify(error)),
       {
         enableHighAccuracy: true,
+        timeout: 20000,
+        maximumAge: 10,
+        distanceFilter: 100,
       },
     );
   }, []);
@@ -92,6 +94,7 @@ export const HomeScreen = () => {
         numberOfLines={4}
         value={url}
         style={{
+          color: '#000',
           marginTop: scale(12),
         }}
       />

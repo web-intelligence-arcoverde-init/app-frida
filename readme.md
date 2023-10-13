@@ -20,6 +20,7 @@ https://reactnative.dev/docs/debugging.html#react-developer-tools
 # TASKS 03/02/2023
 
 - [x] - adicionar https://github.com/michalchudziak/react-native-geolocation
+- [] - rodar app em segundo plano https://github.com/jamesisaac/react-native-background-task
 
 # Comandos básicos
 
