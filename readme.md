@@ -39,3 +39,13 @@ https://reactnative.dev/docs/debugging.html#react-developer-tools
 ## Limpar task do projeto
 
 - cd android ./gradlew clean
+
+## React-Native-GEOLOCATION
+
+- https://github.com/michalchudziak/react-native-geolocation
+
+-- wbALAUSVH2E66CXB
+
+## scrpy
+
+https://github.com/Genymobile/scrcpy

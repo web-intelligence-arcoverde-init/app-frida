@@ -11,7 +11,7 @@ import {useNavigationHook} from '../../hooks';
 
 import {scale} from '../../utils';
 
-const {IntroScreen01, IntroScreen02, IntroScreen03, Example1} = IMAGES;
+const {IntroScreen01, IntroScreen02, Example1} = IMAGES;
 
 export const IntroScreen = () => {
   const {navigate} = useNavigationHook();
